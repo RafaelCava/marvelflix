@@ -1,12 +1,11 @@
 import axios from 'axios';
 import { apiBase, hash, pubKey } from '../../lib/marvel';
 
-export default async function getPersons(req, res) {
+export default async (req, res) => {
   try {
-    const data = await axios.get(`${apiBase}characters?&ts=1&apikey=${pubKey}&hash=${hash}`);
-    console.log(data);
+    const data = await axios.get(`${apiBase}characters?limit=100&ts=1&apikey=${pubKey}&hash=${hash}`);
     res.status(200).json({
-      list: data.data.data,
+      list: data.data
     });
   } catch (error) {
     res.status(404);

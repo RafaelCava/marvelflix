@@ -5,21 +5,25 @@ import styles from '../styles/css/Home.module.css';
 
 const Home = ({ list }) => (
   <div className={styles.container}>
-    <p>{list.autor[0]}</p>
-    <p>{list.autor[1]}</p>
-    <p>{list.dias[1]}</p>
-    <p>{list.dias[0]}</p>
+    <ul>
+      {list.results.map(item => (
+        <li>
+          <h1>{ item.id }</h1>
+          <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
+          <h2>{ item.name }</h2>
+        </li>
+      ))}
+    </ul>
   </div>
 );
 
 export default Home;
 
-export async function getSe() {
-  const data = await axios.get('http://localhost:3000/api/personagens');
-
+export async function getServerSideProps() {
+  const res = await axios.get('http://localhost:3000/api/personagens');
   return {
     props: {
-      list: data,
+      list: res.data.list.data,
     },
   };
 }
