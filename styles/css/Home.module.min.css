@@ -1,1 +1,1 @@
-.container ul{display:flex;flex-wrap:wrap;justify-content:center}.container li{display:flex;flex-direction:column;flex-wrap:wrap;justify-content:center;align-items:center;padding:30px;background-color:pink}
+.container ul{display:flex;flex-wrap:wrap;justify-content:center}.container li{display:flex;text-align:center;flex-direction:column;flex-wrap:wrap;padding:30px;background-color:pink}
