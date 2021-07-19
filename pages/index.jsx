@@ -8,9 +8,11 @@ const Home = ({ list }) => (
     <ul>
       {list.results.map(item => (
         <li>
-          <h1>{ item.id }</h1>
-          <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
-          <h2>{ item.name }</h2>
+          <a href={`personagem/${item.id}`}>
+            <h1>{ item.id }</h1>
+            <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
+            <h2>{ item.name }</h2>
+          </a>
         </li>
       ))}
     </ul>
