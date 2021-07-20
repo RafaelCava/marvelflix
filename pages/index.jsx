@@ -24,8 +24,8 @@ const Home = ({ list }) => (
         {list.results.map(item => (
           <li>
             <a href={`personagem/${item.id}`}>
-              <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
               <h1>{ item.name }</h1>
+              <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
             </a>
           </li>
         ))}

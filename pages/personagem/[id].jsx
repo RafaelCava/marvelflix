@@ -7,7 +7,7 @@ const personagem = ({list}) => {
       <title>{list[0].name}</title>
     </Head>
       <h1>{list[0].name}</h1>
-      <h2>{list[0].description}</h2>
+      <p>{list[0].description}</p>
       <img src={`${list[0].thumbnail.path}/detail.${list[0].thumbnail.extension}`} alt={`imagem do ${list[0].name}`} />
       <h2>Revistas em Quadrinhos</h2>
       <ul>
@@ -58,7 +58,7 @@ export default personagem
 export async function getServerSideProps(context){
   const {id} = context.params
   const res = await axios.get(`http://localhost:3000/api/SearchById/${id}`)
-  console.log(res.data.list[0]);
+  // console.log(res.data.list[0]);
   return {
     props : {
       list: res.data.list
