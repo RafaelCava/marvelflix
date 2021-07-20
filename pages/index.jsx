@@ -1,21 +1,27 @@
-// import Head from 'next/head'
+import Head from 'next/head'
 // import Image from 'next/image'
 import axios from 'axios';
 import styles from '../styles/css/Home.module.css';
 
 const Home = ({ list }) => (
   <div className={styles.container}>
-    <ul>
-      {list.results.map(item => (
-        <li>
-          <a href={`personagem/${item.id}`}>
-            <h1>{ item.id }</h1>
-            <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
-            <h2>{ item.name }</h2>
-          </a>
-        </li>
-      ))}
-    </ul>
+    <Head>
+      <title>MarvelFlix</title>
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <main>
+      <ul>
+        {list.results.map(item => (
+          <li>
+            <a href={`personagem/${item.id}`}>
+              <h1>{ item.id }</h1>
+              <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
+              <h2>{ item.name }</h2>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </main>
   </div>
 );
 
