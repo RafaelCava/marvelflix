@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 import Head from 'next/head';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
+import styles from '../../styles/css/Personagens.module.css';
 
 const personagem = ({ list }) => (
   <div>
@@ -17,7 +17,7 @@ const personagem = ({ list }) => (
     <h2>Revistas em Quadrinhos</h2>
     <ul>
       {list[0].comics.items.map((item) => (
-        <li>
+        <li key={list[0].comics.items.indexOf(item)}>
           <a href="#">{item.name}</a>
         </li>
       ))}
@@ -53,29 +53,19 @@ const personagem = ({ list }) => (
         </li>
       ))}
     </ul>
-    <Button color="secondary" variant="contained" href="/">Inicio</Button>
+    <Button className={styles.button} href="/">Inicio</Button>
   </div>
 );
 
 export default personagem;
 
-export async function getStaticProps({ params }) {
-  const { id } = params;
+export async function getServerSideProps(context) {
+  const { id } = context.params;
   const res = await axios.get(`http://localhost:3000/api/SearchById/${id}`);
   // console.log(res.data.list[0]);
   return {
     props: {
       list: res.data.list,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { id: '1011334' } },
-      { params: { id: '2' } },
-    ],
-    fallback: true,
   };
 }

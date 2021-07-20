@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,KAAK,EAAE,eAAe",
+"sources": ["../sass/Personagens.module.sass"],
+"names": [],
+"file": "Personagens.module.css"
+}

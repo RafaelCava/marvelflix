@@ -23,7 +23,7 @@ const Home = ({ list }) => (
     <main className={styles.main}>
       <ul>
         {list.results.map((item) => (
-          <li>
+          <li key={item.id}>
             <a href={`personagem/${item.id}`}>
               <h1>{ item.name }</h1>
               <img src={`${item.thumbnail.path}/portrait_xlarge.${item.thumbnail.extension}`} alt="imagem person" />
