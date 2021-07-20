@@ -1,3 +1,4 @@
+$color_header: #aa3f3f
 .container
   .header
     letter-spacing: 2px
@@ -8,7 +9,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    background-color: #aa3f3f
+    background-color: $color_header
     h1
       span
         color: red
@@ -47,7 +48,7 @@
         letter-spacing: 2px
 
 .main 
-  background: linear-gradient(to bottom,#aa3f3f,#f80c0c)
+  background: linear-gradient(to bottom,$color_header,#f80c0c)
 
 @media screen and ( max-width: 768px )
   .container 
