@@ -42,4 +42,14 @@
 .main {
   background: linear-gradient(to bottom, #aa3f3f, #f80c0c); }
 
+@media screen and (max-width: 768px) {
+  .container .header {
+    flex-direction: column;
+    text-align: center; }
+  .container ul {
+    flex-direction: column; }
+  .container li {
+    width: 100%;
+    max-width: 100%; } }
+
 /*# sourceMappingURL=Home.module.css.map */
