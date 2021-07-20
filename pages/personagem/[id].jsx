@@ -73,5 +73,6 @@ export async function getServerSideProps(context) {
     props: {
       list: res.data.list,
     },
+    revalidate: 10,
   };
 }
