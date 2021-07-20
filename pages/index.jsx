@@ -43,5 +43,6 @@ export async function getStaticProps() {
     props: {
       list: res.data.list.data,
     },
+    revalidate: 10,
   };
 }
