@@ -9,7 +9,7 @@ yarn dev
 ```
 
 ## Previa
-![gif](/public/gif.gif)
+![gif](/public/giff.gif)
 
 ## Tecnologias
 
