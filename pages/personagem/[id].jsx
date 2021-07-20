@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Head from 'next/head';
 import axios from 'axios';
 import { Button } from '@material-ui/core';
@@ -58,13 +59,23 @@ const personagem = ({ list }) => (
 
 export default personagem;
 
-export async function getServerSideProps(context) {
-  const { id } = context.params;
+export async function getStaticProps({ params }) {
+  const { id } = params;
   const res = await axios.get(`http://localhost:3000/api/SearchById/${id}`);
   // console.log(res.data.list[0]);
   return {
     props: {
       list: res.data.list,
     },
+  };
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { id: '1011334' } },
+      { params: { id: '2' } },
+    ],
+    fallback: true,
   };
 }
