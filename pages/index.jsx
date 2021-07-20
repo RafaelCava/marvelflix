@@ -7,6 +7,7 @@ const Home = ({ list }) => (
   <div className={styles.container}>
     <Head>
       <title>MarvelFlix</title>
+      <meta name='viewport' content='minimum-scale=1, initial-scale=1,'/>
       <link rel="icon" href="/favicon.ico" />
       <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" />
     </Head>
