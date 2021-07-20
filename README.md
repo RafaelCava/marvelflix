@@ -16,3 +16,5 @@ yarn dev
 Next.js
 React.js
 Material-ui
+
+# Se você gostou deixar uma estrela :)
