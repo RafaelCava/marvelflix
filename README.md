@@ -8,6 +8,9 @@ npm run dev
 yarn dev
 ```
 
+## Previa
+![gif](/public/gif.gif)
+
 ## Tecnologias
 
 Next.js
