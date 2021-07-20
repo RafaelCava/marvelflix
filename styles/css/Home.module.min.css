@@ -1,1 +1,1 @@
-.container ul{display:flex;flex-wrap:wrap;justify-content:center}.container li{display:flex;text-align:center;flex-direction:column;flex-wrap:wrap;padding:30px;background-color:pink}
+.container .header{font-family:lato;font-weight:900;padding:30px;display:flex;justify-content:space-between;align-items:center;background-color:#aa3f3f}.container .header h1 span{color:red}.container ul{display:flex;flex-wrap:wrap;justify-content:center}.container li{width:25%;display:flex;text-align:center;flex-direction:column;flex-wrap:wrap;padding:30px;background-color:pink}
