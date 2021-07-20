@@ -69,7 +69,6 @@ export default personagem;
 export async function getServerSideProps(context) {
   const { id } = context.params;
   const res = await axios.get(`http://localhost:3000/api/SearchById/${id}`);
-  // console.log(res.data.list[0]);
   return {
     props: {
       list: res.data.list,
