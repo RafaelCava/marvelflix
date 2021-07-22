@@ -1,7 +1,17 @@
 ## Abrir projeto
 
-Para iniciar o projeto
-
+Para iniciar o projeto, 
+- Primeiro clone o Repositório para sua máquina
+```bash
+git clone <linkdorepositório>
+```
+- Depois instale as dependências
+```bash
+npm install
+# or
+yarn
+```
+- Depois é só Rodar o código
 ```bash
 npm run dev
 # or
