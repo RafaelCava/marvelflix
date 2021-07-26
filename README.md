@@ -23,8 +23,8 @@ yarn dev
 
 ## Tecnologias
 
-Next.js
-React.js
-Material-ui
-
+ - Next.js
+ - React.js
+ - Material-ui
+ - Axios
 # Se você gostou deixar uma estrela :)
