@@ -18,6 +18,9 @@ npm run dev
 yarn dev
 ```
 
+## Link projeto na AWS
+http://3.142.229.72:3000/
+
 ## Previa
 ![gif](/public/giff.gif)
 
